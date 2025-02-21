@@ -147,32 +147,32 @@
    ```
 
    Esto permitirá que el script sea ejecutable.
-9. Script ejecutable cada que se abra un nuevo bash
 
-   Abrimos el archivo `~/.bashrc`
-   Agregamos al final la ruta de nuestro script `/home/ubuntu/init.sh` y listo
+9. **Script ejecutable cada que se abra un nuevo bash**
 
-10. **Salir del contenedor de Ubuntu:**
+   - Abrimos el archivo `~/.bashrc`
+   - Agregamos al final la ruta de nuestro script `/home/ubuntu/init.sh` y listo
 
-   Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
+10. **Salir del contenedor de Ubuntu**
 
-   ```sh
-   exit
-   ```
+      Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
+
+      ```sh
+      exit
+      ```
 
 11. **Guardar los cambios en una nueva imagen:**
+      Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
 
-   Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
+      ```sh
+      docker stop ubuntu-container
+      ```
 
-   ```sh
-   docker stop ubuntu-container
-   ```
+      Luego, guarda los cambios en una nueva imagen:
 
-   Luego, guarda los cambios en una nueva imagen:
+      ```sh
+      docker commit ubuntu-container ubuntu-custom
+      ```
 
-   ```sh
-   docker commit ubuntu-container ubuntu-custom
-   ```
-
-   - `ubuntu-container`: Nombre del contenedor actual.
-   - `ubuntu-custom`: Nombre de la nueva imagen.
+      - `ubuntu-container`: Nombre del contenedor actual.
+      - `ubuntu-custom`: Nombre de la nueva imagen.
